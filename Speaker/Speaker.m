@@ -51,13 +51,6 @@ static void AQInputCallback (void *                          inUserData,
     return self;
 }
 
-//-(id)init{
-//    self = [super init];
-//    if (self) {
-//        [self setup];
-//    }
-//    return self;
-//}
 
 //set audio parameter
 -(void)setup{

@@ -16,6 +16,12 @@
 		A7C96DD21E5597E2005AA057 /* SpeakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C96DD11E5597E2005AA057 /* SpeakerTests.m */; };
 		A7C96DDD1E5597E2005AA057 /* SpeakerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C96DDC1E5597E2005AA057 /* SpeakerUITests.m */; };
 		A7C96DEC1E5597EF005AA057 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C96DEB1E5597EF005AA057 /* Speaker.m */; };
+		A7C96DF61E559FCB005AA057 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C96DEE1E559F00005AA057 /* AudioToolbox.framework */; };
+		A7C96DF71E55A026005AA057 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C96DF21E559F3D005AA057 /* CoreAudio.framework */; };
+		A7C96DF91E55A034005AA057 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C96DF81E55A034005AA057 /* AVFoundation.framework */; };
+		A7C96DFB1E55A040005AA057 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C96DFA1E55A040005AA057 /* CoreGraphics.framework */; };
+		A7C96DFD1E55A049005AA057 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C96DFC1E55A049005AA057 /* UIKit.framework */; };
+		A7C96DFF1E55A054005AA057 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C96DFE1E55A053005AA057 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,14 @@
 		A7C96DDE1E5597E2005AA057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7C96DEA1E5597EF005AA057 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
 		A7C96DEB1E5597EF005AA057 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
+		A7C96DEE1E559F00005AA057 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A7C96DF01E559F37005AA057 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		A7C96DF21E559F3D005AA057 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A7C96DF41E559F45005AA057 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		A7C96DF81E55A034005AA057 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A7C96DFA1E55A040005AA057 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7C96DFC1E55A049005AA057 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A7C96DFE1E55A053005AA057 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +75,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C96DFF1E55A054005AA057 /* Foundation.framework in Frameworks */,
+				A7C96DFD1E55A049005AA057 /* UIKit.framework in Frameworks */,
+				A7C96DFB1E55A040005AA057 /* CoreGraphics.framework in Frameworks */,
+				A7C96DF91E55A034005AA057 /* AVFoundation.framework in Frameworks */,
+				A7C96DF71E55A026005AA057 /* CoreAudio.framework in Frameworks */,
+				A7C96DF61E559FCB005AA057 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +108,7 @@
 				A7C96DD01E5597E2005AA057 /* SpeakerTests */,
 				A7C96DDB1E5597E2005AA057 /* SpeakerUITests */,
 				A7C96DB51E5597E2005AA057 /* Products */,
+				A7C96DED1E559F00005AA057 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +164,21 @@
 				A7C96DDE1E5597E2005AA057 /* Info.plist */,
 			);
 			path = SpeakerUITests;
+			sourceTree = "<group>";
+		};
+		A7C96DED1E559F00005AA057 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7C96DFE1E55A053005AA057 /* Foundation.framework */,
+				A7C96DFC1E55A049005AA057 /* UIKit.framework */,
+				A7C96DFA1E55A040005AA057 /* CoreGraphics.framework */,
+				A7C96DF81E55A034005AA057 /* AVFoundation.framework */,
+				A7C96DF41E559F45005AA057 /* CoreAudioKit.framework */,
+				A7C96DF21E559F3D005AA057 /* CoreAudio.framework */,
+				A7C96DF01E559F37005AA057 /* AudioUnit.framework */,
+				A7C96DEE1E559F00005AA057 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +471,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U54J3QSAHN;
 				INFOPLIST_FILE = Speaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cjl.Speaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U54J3QSAHN;
 				INFOPLIST_FILE = Speaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cjl.Speaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -522,6 +560,7 @@
 				A7C96DE31E5597E2005AA057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7C96DE41E5597E2005AA057 /* Build configuration list for PBXNativeTarget "SpeakerTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +569,7 @@
 				A7C96DE61E5597E2005AA057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7C96DE71E5597E2005AA057 /* Build configuration list for PBXNativeTarget "SpeakerUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +578,7 @@
 				A7C96DE91E5597E2005AA057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
