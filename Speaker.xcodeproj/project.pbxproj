@@ -15,6 +15,7 @@
 		A7C96DC71E5597E2005AA057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C96DC51E5597E2005AA057 /* LaunchScreen.storyboard */; };
 		A7C96DD21E5597E2005AA057 /* SpeakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C96DD11E5597E2005AA057 /* SpeakerTests.m */; };
 		A7C96DDD1E5597E2005AA057 /* SpeakerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C96DDC1E5597E2005AA057 /* SpeakerUITests.m */; };
+		A7C96DEC1E5597EF005AA057 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C96DEB1E5597EF005AA057 /* Speaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		A7C96DD81E5597E2005AA057 /* SpeakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C96DDC1E5597E2005AA057 /* SpeakerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeakerUITests.m; sourceTree = "<group>"; };
 		A7C96DDE1E5597E2005AA057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7C96DEA1E5597EF005AA057 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
+		A7C96DEB1E5597EF005AA057 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				A7C96DBB1E5597E2005AA057 /* AppDelegate.m */,
 				A7C96DBD1E5597E2005AA057 /* ViewController.h */,
 				A7C96DBE1E5597E2005AA057 /* ViewController.m */,
+				A7C96DEA1E5597EF005AA057 /* Speaker.h */,
+				A7C96DEB1E5597EF005AA057 /* Speaker.m */,
 				A7C96DC01E5597E2005AA057 /* Main.storyboard */,
 				A7C96DC31E5597E2005AA057 /* Assets.xcassets */,
 				A7C96DC51E5597E2005AA057 /* LaunchScreen.storyboard */,
@@ -279,6 +284,7 @@
 				A7C96DBF1E5597E2005AA057 /* ViewController.m in Sources */,
 				A7C96DBC1E5597E2005AA057 /* AppDelegate.m in Sources */,
 				A7C96DB91E5597E2005AA057 /* main.m in Sources */,
+				A7C96DEC1E5597EF005AA057 /* Speaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

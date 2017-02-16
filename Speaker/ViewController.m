@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "Speaker.h"
+
+
 
 @interface ViewController ()
 
@@ -24,6 +27,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    
+    Speaker * speaker = [[Speaker alloc] init];
+    
+    [speaker start];
+    
+    
+
+}
+
 
 
 @end
