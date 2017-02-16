@@ -12,6 +12,11 @@
 
 
 @interface ViewController ()
+{
+    BOOL _isRecording;
+}
+
+@property (nonatomic, strong) Speaker *record;
 
 @end
 
@@ -19,7 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.record = [[Speaker alloc] init];
+    
+    
+    
 }
 
 
@@ -32,9 +41,14 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     
-    Speaker * speaker = [[Speaker alloc] init];
+    if (_isRecording) {
+        [self.record stop];
+        _isRecording = NO;
+    }else{
+        _isRecording = YES;
+        [self.record start];
+    }
     
-    [speaker start];
     
     
 
