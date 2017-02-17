@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.record = [[Speaker alloc] init];
+    self.record = [Speaker sharedInstance];
     
     
     

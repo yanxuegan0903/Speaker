@@ -16,6 +16,8 @@
 
 @interface Speaker : NSObject
 
++(Speaker *)sharedInstance;
+
 - (void)start;
 - (void) stop;
 

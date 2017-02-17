@@ -42,6 +42,16 @@ static void AQInputCallback (void *                          inUserData,
     AudioQueueEnqueueBuffer(inAQ, inBuffer, 0, NULL);
 }
 
+
++(Speaker *)sharedInstance{
+    static Speaker *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[Speaker alloc] init];
+    });
+    return instance;
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -73,7 +83,7 @@ static void AQInputCallback (void *                          inUserData,
     for (int i=0;i<kNumberBuffers;i++){
 //        AudioQueueAllocateBuffer(_queue, 640, &_mBuffers[i]);
         AudioQueueAllocateBuffer(_queue, 960, &_mBuffers[i]);   // 修改了
-//        AudioQueueEnqueueBuffer(_queue, _mBuffers[i], 0, NULL);
+        AudioQueueEnqueueBuffer(_queue, _mBuffers[i], 0, NULL);
     }
 
 }
@@ -83,17 +93,19 @@ static void AQInputCallback (void *                          inUserData,
     NSLog(@"============================ speaker start");
     
     
-    for (int i=0;i<kNumberBuffers;i++){
-        AudioQueueEnqueueBuffer(_queue, _mBuffers[i], 0, NULL);
-    }
-    AudioQueueStart(_queue, NULL);
-
+//    for (int i=0;i<kNumberBuffers;i++){
+//        AudioQueueEnqueueBuffer(_queue, _mBuffers[i], 0, NULL);
+//    }
+    int status = AudioQueueStart(_queue, NULL);
+    NSLog(@"------------------------开始录音 status = %d",status);
 }
 
 - (void)stop{
 
-    AudioQueueStop(_queue, true);
-
+    int status = AudioQueueStop(_queue, true);
+    
+    NSLog(@"------------------------停止录音 status = %d",status);
+    
 }
 
 -(void)dealloc{
@@ -116,7 +128,7 @@ static void AQInputCallback (void *                          inUserData,
     NSLog(@"============================ speaker data.length = %lu",(unsigned long)data.length);
     
     
-    if (data.length != 480) {
+    if (data.length != 960) {
         
         NSLog(@"============================ speaker data 长度不对 直接返回");
         
