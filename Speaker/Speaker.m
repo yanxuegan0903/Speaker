@@ -92,6 +92,18 @@ static void AQInputCallback (void *                          inUserData,
     
     NSLog(@"============================ speaker start");
     
+    NSError * sessionError ;
+    
+    BOOL success = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryRecord withOptions:AVAudioSessionCategoryOptionMixWithOthers error:&sessionError];
+    
+    if (success) {
+        NSLog(@"成功");
+    }else{
+        NSLog(@"失败");
+    }
+    
+    
+    
     
 //    for (int i=0;i<kNumberBuffers;i++){
 //        AudioQueueEnqueueBuffer(_queue, _mBuffers[i], 0, NULL);
