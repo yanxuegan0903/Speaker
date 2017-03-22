@@ -92,6 +92,8 @@ static void AQInputCallback (void *                          inUserData,
     
     NSLog(@"============================ speaker start");
     
+    
+    
     NSError * sessionError ;
     
     BOOL success = [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryRecord withOptions:AVAudioSessionCategoryOptionMixWithOthers error:&sessionError];
@@ -115,7 +117,9 @@ static void AQInputCallback (void *                          inUserData,
 - (void)stop{
 
     int status = AudioQueueStop(_queue, true);
-    
+    AudioQueueFlush(_queue);
+    AudioQueueReset(_queue);
+    [self setup];
     NSLog(@"------------------------停止录音 status = %d",status);
     
 }
